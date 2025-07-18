@@ -1,0 +1,21 @@
+name: First Example
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Welcome message
+        run: |
+          echo "Hello, world!"
+      - name: List files
+        run: |
+          ls -la
+      - name: Read files
+        run: |
+          cat README.md
+
